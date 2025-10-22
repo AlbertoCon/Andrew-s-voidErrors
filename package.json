@@ -3,6 +3,7 @@
   "displayName": "Andrew´s voidErrors",
   "description": "Imagenes perturbadoras que te indican el estado de tu codigo dependiendo de los errores que tenga, Creepypasta hecho en Guatemala con el mito guatemalteco del andres programador que se pone triste si tu codigo esta mal",
   "version": "0.0.1",
+  "publisher": "Alberto Contreras",
   "icon":"icon.png",
   "engines": {
     "vscode": "^1.105.0"
