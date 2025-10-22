@@ -9,15 +9,47 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
+  "files": [
+    "out",
+    "media"
+  ],
   "contributes": {
     "commands": [
       {
-        "command": "andrews-voiderrors.helloWorld",
-        "title": "Hello World"
+        "command": "andrews-voiderrors.showAndrewPanel",
+        "title": "Mostrar estado de Andrew",
+        "category": "Andrew's voidErrors"
       }
-    ]
+    ],
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "andrews-voiderrors.andrewView",
+          "name": "Andrew Monitor"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "andrews-voiderrors.andrewView",
+        "contents": "Andrew está vigilando tu código... 👁️\n[Abrir Andrew Monitor](command:andrews-voiderrors.showAndrewPanel)"
+      }
+    ],
+    "configuration": {
+      "title": "Andrew's voidErrors",
+      "properties": {
+        "andrewsVoiderrors.showInStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Mostrar el estado de Andrew en la barra de estado"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
