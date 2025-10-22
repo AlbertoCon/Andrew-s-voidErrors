@@ -264,23 +264,12 @@ class AndrewWebviewViewProvider implements vscode.WebviewViewProvider {
                     
                     <div class="error-count">${errorCount} errores</div>
                     
-                    <div class="andrew-message">
-                        ${andrewState.message}
-                    </div>
-                    
                     <img class="andrew-image" src="${imageSrc}" alt="Estado de Andrew">
                     
                     <div class="status-info">
                         Estado: ${andrewState.statusBarText.replace(/\$\([^)]+\)\s*/g, '')}
                     </div>
                     
-                    <div class="legend">
-                        Leyenda guatemalteca
-                    </div>
-                    
-                    <div class="warning">
-                        Se actualiza automáticamente
-                    </div>
                 </div>
             </body>
             </html>
