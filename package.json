@@ -1,15 +1,23 @@
 {
   "name": "andrews-voiderrors",
-  "displayName": "Andrew´s voidErrors",
-  "description": "Imagenes perturbadoras que te indican el estado de tu codigo dependiendo de los errores que tenga, Creepypasta hecho en Guatemala con el mito guatemalteco del andres programador que se pone triste si tu codigo esta mal",
+  "displayName": "Andrew's voidErrors",
+  "description": "Imágenes perturbadoras que te indican el estado de tu código dependiendo de los errores que tenga. Creepypasta hecho en Guatemala con el mito guatemalteco del Andrés programador que se pone triste si tu código está mal",
   "version": "0.0.1",
   "publisher": "AlbertoCon",
-  "icon":"icon.png",
+  "icon": "media/icon.png",
   "engines": {
     "vscode": "^1.105.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "guatemala",
+    "creepypasta",
+    "andrew",
+    "errors",
+    "monitor"
   ],
   "activationEvents": [
     "onStartupFinished"
@@ -17,7 +25,10 @@
   "main": "./out/extension.js",
   "files": [
     "out",
-    "media"
+    "media",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "contributes": {
     "commands": [
@@ -31,16 +42,16 @@
       "explorer": [
         {
           "type": "webview",
+          "icon": "media/andre.svg" ,
           "id": "andrews-voiderrors.andrewView",
-          "name": "Andrew Monitor",
-          "icon": "media/andre.svg" 
+          "name": "Andrew Monitor"
         }
       ]
     },
     "viewsWelcome": [
       {
         "view": "andrews-voiderrors.andrewView",
-        "contents": "Andrew está vigilando tu código... 👁️\n[Abrir Andrew Monitor](command:andrews-voiderrors.showAndrewPanel)"
+        "contents": "Andrew está vigilando tu código... 👁️\n[**Abrir Andrew Monitor**](command:andrews-voiderrors.showAndrewPanel)"
       }
     ],
     "configuration": {
